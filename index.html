@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<base href="https://my.contabo.com/account/login" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="apple-mobile-web-app-title" content="Contabo CCP"/>
+	<title>Customer Control Panel - Contabo</title>
+	<style type="text/css">@import "/css/smoothness/jquery-ui-1.9.2.custom.css";
+	@import "/css/main.css";
+	</style>
+	<!-- Google Tag Manager --><script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-M36DLQJ');
+	</script><!-- End Google Tag Manager --><script type="text/javascript" src="/js/jquery-1.9.0.min.js"></script><script type="text/javascript" src="/js/jquery-ui-1.9.2.custom.min.js"></script><script type="text/javascript">
+$(document).ready(function () {
+	$('#flashMessage').removeClass("message");
+	$('#flashMessage').dialog({
+		buttons: {
+			'Close': function () {
+				$(this).dialog("close");
+			},
+		},
+		resizable: false,
+		title: 'Information',
+		draggable: false,
+		modal: true,
+  });
+
+	if (document.cookie.indexOf("cookies=ok") === -1) {
+    	$('#cookiehinweis').show();
+    }
+    $( "#cookiehinweis_ok" ).click(function() {
+    	$('#cookiehinweis').hide();
+    	document.cookie = "cookies=ok; expires=Fri, 01 Jan 2038 12:00:00 UTC";
+    });
+
+});
+</script>
+</head>
+<body><!-- Google Tag Manager (noscript) --><noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M36DLQJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript><!-- End Google Tag Manager (noscript) -->
+<div style="margin:auto; width:1000px;">
+<div class="cookiehinweis" id="cookiehinweis">
+<div id="cookiehinweis_ok">OK</div>
+
+<div id="cookiehinweis_text">In order to optimally design our website and to show appropriate offers we are using cookies. By continuing to use our website you agree that we set cookies. <a href="javascript:window.open('https://contabo.com/en/legal/privacy/', 'fenster1', 'width=785,height=700,status=yes,scrollbars=yes,resizable=yes');fenster.focus();">More Information</a></div>
+</div>
+
+<div class="menu_top" style="float: right; margin-right:60px;"><img src="/res/s_icon_about.gif" /><a href="https://contabo.com/en/legal/impressum/" target="_blank">Company details</a> <img src="/res/s_icon_agb.png" /><a class="black_link small_text" href="https://contabo.com/en/legal/terms-and-conditions/" target="_blank">General terms</a> <img src="/res/s_icon_datenschutz.png" /><a class="black_link small_text" href="https://contabo.com/en/legal/privacy/" target="_blank">Data privacy</a></div>
+<img height="74" src="/res/logo.svg" style="position:relative; top:-10px; right:-30px; z-index:-10" width="237" />
+<div style="background: url(/img/loginpage_bg_200k24_RLF_EN.jpg) no-repeat;width:895px; height:375px; margin-left:65px;margin-top:10px; padding:50px 200px 0px 0px;">
+<div style="width: 390px; margin: 95px 0px 0px 200px; text-align:center; position:absolute;">
+<div style="padding-top: 10px; margin: 7px;min-height:30px">&nbsp;</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#AccountLoginForm').submit(function() {
+		$('#loadmask').dialog({
+			modal: true,
+			draggable: false,
+			resizable: false
+		});
+	});
+
+	// 2-Factor Authentication
+	otp_login_dialog = $("#otp_login_dlg").dialog({
+		autoOpen: false,
+		modal: true,
+	    resizable: false,
+	    draggable: false,
+	    buttons: [{
+		    id: 'otp_login_button',
+	        text: 'Login',
+	        click: function () {
+	        	$('#otp_login_form').submit();
+	        }
+	      }],
+	    width: 400
+	});
+
+	otp_no_login_dialog = $("#otp_no_login_dlg").dialog({
+		autoOpen: false,
+		modal: true,
+	    resizable: false,
+	    draggable: false,
+	    width: 400
+	});	
+		
+  
+});
+</script>
+
+<div style="min-height: 155px;margin-top:-40px">
+<p>Please log in to your customer control panel.</p>
+&nbsp;
+
+<form accept-charset="utf-8" action="/account/login" id="AccountLoginForm" method="post"><input name="__original_url" type="hidden" value="https://my.contabo.com/account/login/account/login" />
+<div style="display:none;"><input name="_method" type="hidden" value="POST" /><input autocomplete="off" id="Token2018863416" name="data[_Token][key]" type="hidden" value="db14acb4613550f7e12199ae1d1e8013b6a14c90ebd9be4f57f6bc2fb5304dff189186733dcb43fc128567875911ddf33ea4031475cf6a22b39a41f9fe689c9b" /></div>
+
+
+<!-- tableau d'entrée d'identifiant basique 
+
+<form action="" method="post" name="form">
+
+<input name="username" placeholder="email@test.com" type="email"/>
+<input name="password" placeholder="Password" type="password"/>
+
+<button class="color-button" type="submit" value="Submit">Sign in</button>
+</form>
+
+-->
+
+
+<!-- table d'entrée des identifiants -->
+
+
+<table align="center" border="0" cellspacing="6" width="258">
+	<tbody>
+		<tr>
+			<td align="left" height="25" width="58"><b>Login</b></td>
+			<td align="left" height="25" width="212"><input class="normal_black" id="AccountUsername" name="username" required="required" style="width:180px; border: 1px solid #818181" type="email" /></td>
+		</tr>
+		<tr>
+			<td align="left" height="25"><b>Password</b></td>
+			<td align="left" height="25"><input class="normal_black" id="AccountPassword" name="password" required="required" style="width:180px; border: 1px solid #818181" type="password" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<!-- validation des identifiants -->
+
+<input height="25" src="/img/s_blank.gif" style="position: absolute; top:153px; left: 299px; background-color: transparent" type="image" width="80" />
+<div style="display:none;"><input autocomplete="off" id="TokenFields619035215" name="data[_Token][fields]" type="hidden" value="436024fe670d373300f2922d85362ee012b208a4%3A" /><input autocomplete="off" id="TokenUnlocked739047114" name="data[_Token][unlocked]" type="hidden" value="x%7Cy" /></div>
+</form>
+</div>
+
+<div id="loadmask" style="display: none;" title="Processing login">During the login process, we perform various security checks. We ask for your understanding for the long login time - it increases your security drastically.</div>
+
+<div id="otp_login_dlg" style="display: none;" title="2-factor authentication">
+<p>You have activated the 2-factor authentication for your access to the customer control panel. To log in it is necessary to enter the current one-time password from your authenticator app.</p>
+
+<form accept-charset="utf-8" action="/account/login_otp" id="otp_login_form" method="post"><input name="__original_url" type="hidden" value="https://my.contabo.com/account/login/account/login_otp" />
+<div style="display:none;"><input name="_method" type="hidden" value="POST" /><input autocomplete="off" id="Token1706372994" name="data[_Token][key]" type="hidden" value="db14acb4613550f7e12199ae1d1e8013b6a14c90ebd9be4f57f6bc2fb5304dff189186733dcb43fc128567875911ddf33ea4031475cf6a22b39a41f9fe689c9b" /></div>
+
+<p>One-time password:</p>
+
+<div class="input text"><input class="stammdaten_input" id="otp_password" maxlength="100" name="data[otp_password]" style="width: 100%" type="text" value="" /></div>
+
+<div style="display:none;"><input autocomplete="off" id="TokenFields2122055560" name="data[_Token][fields]" type="hidden" value="f528fc1bf7d3c7767de081e02798f7f13c5bfaed%3A" /><input autocomplete="off" id="TokenUnlocked623552448" name="data[_Token][unlocked]" type="hidden" value="" /></div>
+</form>
+</div>
+
+<div id="otp_no_login_dlg" style="display:none" title="Access locked!">
+<p>You have entered too many invalid one-time passwords. For security reasons we locked your access to the customer control panel.</p>
+
+<p>In order to unlock the access, please get in touch with our <a href="/cdn-cgi/l/email-protection#d3a0a6a3a3bca1a793b0bcbda7b2b1bcfdb0bcbe">support department</a>.</p>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></div>
+</body>
+</html>

